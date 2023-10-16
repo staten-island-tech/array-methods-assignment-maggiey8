@@ -56,8 +56,11 @@ chara.forEach((el) => console.log(el.age));
 chara.forEach((el) => console.log(el.status));
 chara.forEach((el) => console.log(el.siblings));
 
-let traits = chara.forEach((el) => el.about)
-traits.forEach((el => console.log(el)))
+let i = 0;
+while (i < 3) {
+   chara.forEach((el) => console.log(el.about[i]));
+   i++;
+};
 
 const notalive = chara.filter((el) => el.status !== "Alive")
 console.log(notalive)
