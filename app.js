@@ -57,6 +57,7 @@ while (i < 3) {
    i++;
 };
  */
+
 chara.forEach((el) => {
     console.log(`${el.firstName} ${el.lastName}`);
     console.log(el.age);
@@ -65,7 +66,7 @@ chara.forEach((el) => {
     el.about.forEach((trait) => console.log(trait))
     console.log("\n")
 }
-)
+);
 
-const age = chara.filter((el) => el.age === 16)
-console.log(age)
+const notalive = chara.filter((el) => el.status !== "Alive")
+console.log(notalive)
