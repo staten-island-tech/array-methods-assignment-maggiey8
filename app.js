@@ -51,16 +51,21 @@ const chara = [
 ];
 
 
-chara.forEach((el) => console.log(`${el.firstName} ${el.lastName}`));
-chara.forEach((el) => console.log(el.age));
-chara.forEach((el) => console.log(el.status));
-chara.forEach((el) => console.log(el.siblings));
-
-let i = 0;
+/* let i = 0;
 while (i < 3) {
    chara.forEach((el) => console.log(el.about[i]));
    i++;
 };
+ */
+chara.forEach((el) => {
+    console.log(`${el.firstName} ${el.lastName}`);
+    console.log(el.age);
+    console.log(el.status);
+    console.log(el.siblings);
+    el.about.forEach((trait) => console.log(trait))
+    console.log("\n")
+}
+)
 
-const notalive = chara.filter((el) => el.status !== "Alive")
-console.log(notalive)
+const age = chara.filter((el) => el.age === 16)
+console.log(age)
